@@ -1,0 +1,75 @@
+.content-card {
+    position: relative;
+    margin: 0 12px;
+    height: 420px;
+    box-shadow: 0px 3px 10px -6px rgba(133, 133, 133, 0.75);
+    margin-bottom: 20px;
+
+    &__image {
+        width: 100%;
+        height: 175px;
+        object-fit: cover;
+        transition-duration: .2s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+        //font-family: 'Lora', serif;
+        text-decoration: none;
+        color: black;
+        transition-duration: .1s;
+
+        &:hover {
+            color: $colour-card-hover;
+        }
+    }
+
+    &__description {
+        margin-top: 10px;
+        font-size: 1.6rem;
+    }
+
+    &__details {
+        position: absolute;
+        top: 140px;
+        margin: 15px;
+        padding: 15px;
+        background-color: white;
+
+    }
+
+    &__date {
+        font-size: 1.6rem;
+        color: gray;
+
+    }
+
+    &__share {
+        position: absolute;
+        height: 20px;
+
+        right: 30px;
+        bottom: 20px;
+        display: flex;
+    }
+
+    &__share-item {
+        width: 20px;
+        margin: 0 5px;
+        height: 20px;
+
+        fill: lightgray;
+        cursor: pointer;
+        transition-duration: .1s;
+
+        &:hover {
+            fill:$colour-card-hover
+        }
+    }
+}

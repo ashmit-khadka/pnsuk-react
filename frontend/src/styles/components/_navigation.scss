@@ -1,0 +1,249 @@
+.navigation {
+    position: fixed;
+    top: 0;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+	background-color: rgba(249, 252, 255, 0.95);
+	color: rgb(3, 41, 97);
+    z-index: 5;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+   // margin-top: 30px;
+    //border-radius: 10px;
+	box-shadow: 0px 3px 10px -6px rgba(133, 133, 133, 0.75);
+	
+
+
+	&__id {
+		display: flex;
+
+		@include respond(bp-1100) {
+			justify-content: space-between;
+			width: 100%;
+			padding: 0 15px;
+		}
+	}
+
+    &__logo {
+		width: 75px;
+		height: 75px;
+		@include respond(small) {
+			width: 50px;
+			height: 50px;
+
+		}
+	}
+	
+	&__icon {
+		display: none;
+		width: 30px;
+		height: 30px;
+		padding: 10px;
+		@include respond(bp-1100) {
+			display: block;
+		}
+	}
+
+	&__icon-mobile {
+		display: block;
+		//background-color: blueviolet;
+		width: 30px;
+		height: 30px;
+		padding: 25px
+	}
+		
+	&__toggle {
+		display: none;
+		background-color: indianred;
+		width: 20px;
+		height: 20px;
+
+		@include respond(bp-1100) {
+			display: block;
+		}
+	}
+
+    &__organisation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 25px;
+
+		@include respond(small) {
+			display: none;
+		}
+		
+        &--main {
+            font-size: 2rem;
+        }
+
+        &--sub {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__menu {
+        display: flex;
+
+        @include respond(bp-1100) {
+			display: none;
+        }
+    }
+}
+
+.navigation-item {
+	//margin: 0 10px;
+	padding: 10px;
+    font-size: 1.6rem;
+    text-decoration: none;
+	color: black;
+	color: inherit;
+
+	& svg {
+		margin-left: 5px;
+		width: 10px;
+		height: 10px;
+	}
+
+    &--active {
+        font-weight: bold;
+    }
+
+    &__text {
+        font-size: 1.6rem
+    }
+
+    &--dowpdown {
+        border: none
+	}
+	
+	&--donate {
+		position: relative;
+		color: white;
+		padding: 10px 20px;
+		cursor: pointer;
+		transition-duration: .2s;
+
+		
+		& svg {
+			position: absolute;
+			top: -10px;
+			left: -19px;
+			width: 130px;
+			height: 130px;
+			z-index: -1;
+			margin: 0;
+			fill: indianred;
+
+		}
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+}
+
+
+.navigation-menu {
+	display: none;
+
+	@include respond(bp-1100) {
+		//display: block;
+	}
+
+	&--show {
+		display: block;
+	}
+	
+	&__background {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0,0,0,0.8);
+	}
+
+	&__pane {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 80vw;
+		height: 100vh;
+		background-color: rgb(255, 255, 255);
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+	}
+
+	&__item {
+		font-size: 1.6rem;
+		text-decoration: none;
+		padding: 5px 30px;
+		color: black;
+
+		&--sub {
+			padding: 5px 75px;
+		}
+	}
+}
+
+
+.dropdown {
+
+	&:hover .dropdown__container {
+		display: flex;
+	}
+
+	&__button {
+		font-size: 1.6rem;
+		border: none;
+		outline: none;
+		//color: black;
+		color: inherit;
+		background-color: inherit;
+		position: relative;
+	}
+
+	&__container {		
+		display: none;
+		flex-direction: column;
+		position: absolute;
+		top: 20px;
+		margin-top: 50px;
+		background-color: white;
+		box-shadow: 3px 3px 15px -6px rgba(133, 133, 133, 0.75);
+		
+		& a {
+
+			&:hover {
+				background-color: whitesmoke;
+			}
+		}
+	}
+}
+
+
+.dropdown-mobile {
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__container-hide {
+		display: none;
+	}
+
+	&__sub-arrow {
+		margin-left: 5px;
+		width: 10px;
+		height: 10px;
+	}
+}

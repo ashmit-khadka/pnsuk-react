@@ -1,0 +1,23 @@
+@import './abstracts/mixins';
+@import './abstracts/vaiables';
+
+@import './layout/typography.scss';
+@import './layout/spacing.scss';
+@import './layout/form.scss';
+@import './layout/animation.scss';
+
+@import './base/base';
+
+@import './components/navigation';
+@import './components/footer';
+@import './components/home';
+@import './components/gallery';
+@import './components/contentCard';
+@import './components/category';
+@import './components/article';
+@import './components/members';
+@import './components/advertise';
+@import './components/contact';
+@import './components/advertisement';
+@import './components/donate';
+@import './components/minute';
